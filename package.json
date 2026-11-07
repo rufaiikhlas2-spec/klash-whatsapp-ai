@@ -4,7 +4,8 @@
   "main": "bot.js",
   "type": "module",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "postinstall": "npx puppeteer browsers install chrome"
   },
   "dependencies": {
     "groq-sdk": "^0.7.0",
