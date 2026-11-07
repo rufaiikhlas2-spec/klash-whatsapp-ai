@@ -1,12 +1,10 @@
 {
   "name": "klash-whatsapp-ai",
   "version": "1.0.0",
-  "description": "KLASH AI WhatsApp Bot",
   "main": "bot.js",
   "type": "module",
   "scripts": {
-    "start": "node bot.js",
-    "postinstall": "npx puppeteer browsers install chrome"
+    "start": "node bot.js"
   },
   "dependencies": {
     "groq-sdk": "^0.7.0",
