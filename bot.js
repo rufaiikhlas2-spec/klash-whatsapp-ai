@@ -5,8 +5,8 @@ import pino from 'pino';
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-// Type your WhatsApp phone number here with country code (e.g., "2348123456789")
-const pairingNumber = ""; 
+// Your configured WhatsApp phone number
+const pairingNumber = "2348062112118"; 
 
 async function startBot() {
     const { state, saveCreds } = await useMultiFileAuthState('auth_info');
@@ -16,7 +16,7 @@ async function startBot() {
         logger: pino({ level: 'silent' })
     });
 
-    // Automatically request a pairing code if the number is provided and not yet registered
+    // Automatically request a pairing code since the number is provided
     if (!sock.authState.creds.registered && pairingNumber) {
         setTimeout(async () => {
             try {
